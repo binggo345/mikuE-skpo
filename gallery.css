@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* NAVIGATION BAR */
+ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+/* GALLERY */
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  height: 1500px;
+}
+
+/* 4 x 4 FLOATS IMAGE */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* IMAGE STYLE IN GRID */
+.column img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* FLOAT CLEAR COLUMN */
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* EXPAND IMAGE CONTAINER */
+.container {
+  display: none;
+  position: relative;
+}
+
+/* EXPAND TEXT IMAGE */
+#imgtext {
+  left: 15px;
+  bottom: 15px;
+  padding: 5px;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  background-color: #333;
+}
+
+/* CLOSE BUTTON INSIDE EXPANDABLE IMAGE */
+.closebtn {
+  top: 10px;
+  right: 15px;
+  color: white;
+  cursor: pointer;
+  font-size: 35px;
+  position: absolute;
+}
+
+/* FOOTER */
+.footer {
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  color: white;
+  position: sticky;
+  text-align: center;
+  background-color: #333;
+}
+
+@media only screen and (max-width: 800px) {
+  /* DROP DOWN MENU FOR WIDTH UNDER 800px */
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li {
+    text-align: left;
+    width: 100%;
+    float: left;
+  }
+
+  li a,
+  .dropBtn {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+}
